@@ -1,7 +1,7 @@
 piwigo-cdnplus
 ==============
 
-Piwigo-cdnplus is a [plugin](http://piwigo.org/ext/extension_view.php?eid=788) for the [Piwigo](http://piwigo.org/) web gallery that allows allows an easy integration with a Content Delivery Network (CDN) for your gallery.
+Piwigo-cdnplus is a [plugin](http://piwigo.org/ext/extension_view.php?eid=788) for the [Piwigo](http://piwigo.org/) web gallery that allows an easy integration with a Content Delivery Network (CDN) for your gallery.
 
 Installation
 ------------
@@ -23,7 +23,7 @@ Then, go to the admin site, in the plugin section and activate it.
 Usage
 -----
 
-Enable the plugin and setup you CDN configration then enjoy your content faster.
+Enable the plugin and setup your CDN configration then enjoy your content faster.
 
 Please refer to the [wiki](https://github.com/xbgmsharp/piwigo-cdnplus/wiki) for additional information.
 
