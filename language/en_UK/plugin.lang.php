@@ -15,7 +15,7 @@ $lang['CDN_DOMAIN_DESC'] = "The domain (host) of your CDN Server";
 $lang['CDN_DOMAINS_DESC'] = "The domain of your CDN Server.<br />You can also give a comma separated list of different CDN domains. One of these will be appointed to each file in the set at random.<br /><br />You can use the place holders {subdomain}, {domain} and {extension} to refer to the different parts of the domain name of your website.";
 
 $lang['CDN_EXTRA_FILETYPES'] = "Extra Filetypes";
-$lang['CDN_EXTRA_FILETYPES_DESC'] = "A comma separated list of extra file types that should be served from your CDN server, eg: js,css";
+$lang['CDN_EXTRA_FILETYPES_DESC'] = "A comma separated list of extra file types that should be served from your CDN server, eg: png,jpg";
 
 $lang['CDN_FILE_TYPES'] = "File Types";
 $lang['CDN_FILE_TYPES_DESC'] = "Select the filetypes that should be served from your CDN server.";
@@ -25,6 +25,9 @@ $lang['CDN_IGNORE_FILES_DESC'] = "A comma separated list of (part of) path/file 
 
 $lang['CDN_KEEP_HTTPS'] = "Keep HTTPS in urls";
 $lang['CDN_KEEP_HTTPS_DESC'] = "Select to keep the https in the cdn urls. Otherwise the cdn urls will use http.";
+
+$lang['CDN_THEME'] = "Apply to theme";
+$lang['CDN_THEME_DESC'] = "Export the theme files, eg: js,css.";
 
 $lang['CDN_USE'] = "CDN Options";
 $lang['CDN_USE_EXTRA_2'] = "Use 2nd CDN set";
