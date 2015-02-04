@@ -1,0 +1,1 @@
+CDNPlus-integration til Piwigo.
