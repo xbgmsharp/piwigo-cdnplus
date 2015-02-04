@@ -44,6 +44,11 @@ Refer to the <a href="https://github.com/xbgmsharp/piwigo-cdnplus/wiki" target="
         <br/><small>{'CDN_KEEP_HTTPS_DESC'|@translate}</small>
       </li>
       <li>
+        <label>{'CDN_THEME'|@translate} : </label>
+        <label><input name="theme" type="checkbox" value="true" {if $cdn_1.theme}checked="checked"{/if} /></label>
+        <br/><small>{'CDN_THEME_DESC'|@translate}</small>
+      </li>
+      <li>
         <label>{'CDN_FILE_TYPES'|@translate} : </label>
         <small>{'CDN_FILE_TYPES_DESC'|@translate}</small><br/>
            {foreach from=$cdn_1.filetypes key=name_ext item=data}
@@ -57,7 +62,7 @@ Refer to the <a href="https://github.com/xbgmsharp/piwigo-cdnplus/wiki" target="
       </li>
       <li>
         <label>{'CDN_IGNORE_FILES'|@translate} : </label>
-        <label><input name="ignorefiles" type="textarea" cols="40" rows="5" default="" label="{'CDN_IGNORE_FILES'|@translate}" value="{$cdn_1.ignorefiles}" /></label>
+        <label><input name="ignorefiles" type="textarea" cols="50" rows="5" default="" label="{'CDN_IGNORE_FILES'|@translate}" value="{$cdn_1.ignorefiles}" /></label>
         <br/><small>{'CDN_IGNORE_FILES_DESC'|@translate}</small>
       </li>
     </ul>
@@ -84,6 +89,11 @@ Refer to the <a href="https://github.com/xbgmsharp/piwigo-cdnplus/wiki" target="
         <br/><small>{'CDN_KEEP_HTTPS_DESC'|@translate}</small>
       </li>
       <li>
+        <label>{'CDN_THEME'|@translate} : </label>
+        <label><input name="theme_2" type="checkbox" value="true" {if $cdn_2.theme}checked="checked"{/if} /></label>
+        <br/><small>{'CDN_THEME_DESC'|@translate}</small>
+      </li>
+      <li>
         <label>{'CDN_FILE_TYPES'|@translate} : </label>
         <small>{'CDN_FILE_TYPES_DESC'|@translate}</small><br/>
            {foreach from=$cdn_2.filetypes key=name_ext item=data}
@@ -97,7 +107,7 @@ Refer to the <a href="https://github.com/xbgmsharp/piwigo-cdnplus/wiki" target="
       </li>
       <li>
         <label>{'CDN_IGNORE_FILES'|@translate} : </label>
-        <label><input name="ignorefiles_2" type="textarea" cols="40" rows="5" default="" label="{'CDN_IGNORE_FILES'|@translate}" value="{$cdn_2.ignorefiles}" /></label>
+        <label><input name="ignorefiles_2" type="textarea" cols="50" rows="5" default="" label="{'CDN_IGNORE_FILES'|@translate}" value="{$cdn_2.ignorefiles}" /></label>
         <br/><small>{'CDN_IGNORE_FILES_DESC'|@translate}</small>
       </li>
     </ul>
@@ -122,6 +132,11 @@ Refer to the <a href="https://github.com/xbgmsharp/piwigo-cdnplus/wiki" target="
         <br/><small>{'CDN_KEEP_HTTPS_DESC'|@translate}</small>
       </li>
       <li>
+        <label>{'CDN_THEME'|@translate} : </label>
+        <label><input name="theme_3" type="checkbox" value="true" {if $cdn_3.themes}checked="checked"{/if} /></label>
+        <br/><small>{'CDN_THEME_DESC'|@translate}</small>
+      </li>
+      <li>
         <label>{'CDN_FILE_TYPES'|@translate} : </label>
         <small>{'CDN_FILE_TYPES_DESC'|@translate}</small><br/>
            {foreach from=$cdn_3.filetypes key=name_ext item=data}
@@ -135,7 +150,7 @@ Refer to the <a href="https://github.com/xbgmsharp/piwigo-cdnplus/wiki" target="
       </li>
       <li>
         <label>{'CDN_IGNORE_FILES'|@translate} : </label>
-        <label><input name="ignorefiles_3" type="textarea" cols="40" rows="5" default="" label="{'CDN_IGNORE_FILES'|@translate}" value="{$cdn_3.ignorefiles}" /></label>
+        <label><input name="ignorefiles_3" type="textarea" cols="50" rows="5" default="" label="{'CDN_IGNORE_FILES'|@translate}" value="{$cdn_3.ignorefiles}" /></label>
         <br/><small>{'CDN_IGNORE_FILES_DESC'|@translate}</small>
       </li>
     </ul>
@@ -159,6 +174,11 @@ Refer to the <a href="https://github.com/xbgmsharp/piwigo-cdnplus/wiki" target="
         <br/><small>{'CDN_KEEP_HTTPS_DESC'|@translate}</small>
       </li>
       <li>
+        <label>{'CDN_THEME'|@translate} : </label>
+        <label><input name="theme_4" type="checkbox" value="true" {if $cdn_4.theme}checked="checked"{/if} /></label>
+        <br/><small>{'CDN_THEME_DESC'|@translate}</small>
+      </li>
+      <li>
         <label>{'CDN_FILE_TYPES'|@translate} : </label>
         <small>{'CDN_FILE_TYPES_DESC'|@translate}</small><br/>
            {foreach from=$cdn_4.filetypes key=name_ext item=data}
@@ -172,7 +192,7 @@ Refer to the <a href="https://github.com/xbgmsharp/piwigo-cdnplus/wiki" target="
       </li>
       <li>
         <label>{'CDN_IGNORE_FILES'|@translate} : </label>
-        <label><input name="ignorefiles_4" type="textarea" cols="40" rows="5" default="" label="{'CDN_IGNORE_FILES'|@translate}" value="{$cdn_4.ignorefiles}" /></label>
+        <label><input name="ignorefiles_4" type="textarea" cols="50" rows="5" default="" label="{'CDN_IGNORE_FILES'|@translate}" value="{$cdn_4.ignorefiles}" /></label>
         <br/><small>{'CDN_IGNORE_FILES_DESC'|@translate}</small>
       </li>
     </ul>
@@ -197,6 +217,11 @@ Refer to the <a href="https://github.com/xbgmsharp/piwigo-cdnplus/wiki" target="
         <br/><small>{'CDN_KEEP_HTTPS_DESC'|@translate}</small>
       </li>
       <li>
+        <label>{'CDN_THEME'|@translate} : </label>
+        <label><input name="theme_5" type="checkbox" value="true" {if $cdn_5.theme}checked="checked"{/if} /></label>
+        <br/><small>{'CDN_THEME_DESC'|@translate}</small>
+      </li>
+      <li>
         <label>{'CDN_FILE_TYPES'|@translate} : </label>
         <small>{'CDN_FILE_TYPES_DESC'|@translate}</small><br/>
            {foreach from=$cdn_5.filetypes key=name_ext item=data}
@@ -210,7 +235,7 @@ Refer to the <a href="https://github.com/xbgmsharp/piwigo-cdnplus/wiki" target="
       </li>
       <li>
         <label>{'CDN_IGNORE_FILES'|@translate} : </label>
-        <label><input name="ignorefiles_5" type="textarea" cols="40" rows="5" default="" label="{'CDN_IGNORE_FILES'|@translate}" value="{$cdn_5.ignorefiles}" /></label>
+        <label><input name="ignorefiles_5" type="textarea" cols="50" rows="5" default="" label="{'CDN_IGNORE_FILES'|@translate}" value="{$cdn_5.ignorefiles}" /></label>
         <br/><small>{'CDN_IGNORE_FILES_DESC'|@translate}</small>
       </li>
     </ul>

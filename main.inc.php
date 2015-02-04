@@ -22,7 +22,7 @@ add_event_handler('get_admin_plugin_menu_links', 'cdnplus_admin_menu');
 function cdnplus_admin_menu($menu) {
 	global $page,$conf;
 
-	if ($conf['cdnplus_conf']['cdn_enabled'] == 'true' && empty($conf['cdnplus_conf']['cdn']['cdn']) and in_array($page['page'], array('intro','plugins_list'))) {
+	if (!empty(['cdnplus_conf']['cdn_enabled']) && empty($conf['cdnplus_conf']['cdn_1']['host']) and in_array($page['page'], array('intro','plugins_list'))) {
 		$page['errors'][] = l10n('You need to set your CDN host');
 	}
 
@@ -36,13 +36,63 @@ function cdnplus_admin_menu($menu) {
 	return $menu;
 }
 
-//add_event_handler('get_download_url', 'cdnplus_add_prefix'); // download link ?
-//add_event_handler('get_element_url', 'cdnplus_add_prefix');
-//add_event_handler('get_high_url', 'cdnplus_add_prefix');
-add_event_handler('get_src_image_url', 'cdnplus_add_prefix'); // picture page
-add_event_handler('get_derivative_url', 'cdnplus_add_prefix'); // thumbnailCategory & thumbnail & navThumb
+// Add event handler if CDNPlus enable
+if (!empty($conf['cdnplus_conf']['cdn_enabled']))
+{
+	//add_event_handler('get_derivative_url', 'cdnplus_update_url', EVENT_HANDLER_PRIORITY_NEUTRAL, 4);
+	//add_event_handler('get_download_url', 'cdnplus_debug'); // download link ?
+	//add_event_handler('get_element_url', 'cdnplus_debug'); // ?
+	//add_event_handler('get_high_url', 'cdnplus_debug'); // ?
+	add_event_handler('get_src_image_url', 'cdnplus_update_url', EVENT_HANDLER_PRIORITY_NEUTRAL, 4); // picture page
+	add_event_handler('get_derivative_url', 'cdnplus_update_url', EVENT_HANDLER_PRIORITY_NEUTRAL, 4); // thumbnailCategory & thumbnail & navThumb
 
-function cdnplus_add_prefix($content) {
+	// Find which CDN to use for theme and enabled the trigger
+	for($i = 1; $i <= 5; $i++)
+	{
+		if (!empty($conf['cdnplus_conf']['cdn_'.$i]['host'])
+			&& !empty($conf['cdnplus_conf']['cdn_'.$i]['theme']))
+		{
+			$cdnUrl = 'http://';
+			if (!empty($_SERVER['HTTPS']) && !empty($conf['cdnplus_conf']['cdn_'.$i]['keep_https']))
+			{
+				$cdnUrl = 'https://';
+			}
+			define('CDNPLUS', $cdnUrl.$conf['cdnplus_conf']['cdn_'.$i]['host']);
+			define('CDNPLUS_ROOT_URL', CDNPLUS . get_absolute_root_url(false));
+			add_event_handler('get_combined_css', 'cdnplus_combined_css', EVENT_HANDLER_PRIORITY_NEUTRAL, 2); // update CSS
+			add_event_handler('combined_script', 'cdnplus_combined_script', EVENT_HANDLER_PRIORITY_NEUTRAL, 2); // update Javascript
+			add_event_handler('combined_css_postfilter', 'cdnplus_combined_css_postfilter'); // ?
+		}
+	}
+}
+
+function cdnplus_prefilter($source, &$smarty)
+{
+	$source = str_replace('src="{$ROOT_URL}{$themeconf.icon_dir}/', 'src="'.CDNPLUS_ROOT_URL.'{$themeconf.icon_dir}/', $source);
+	$source = str_replace('url({$'.'ROOT_URL}', 'url('.CDNPLUS_ROOT_URL, $source);
+	return $source;
+}
+
+function cdnplus_combined_script($url, $script)
+{
+	if (!$script->is_remote())
+		$url = CDNPLUS_ROOT_URL.$script->path;
+	return $url;
+}
+
+function cdnplus_combined_css($url, $loc)
+{
+	$url = CDNPLUS_ROOT_URL.$loc;
+	return $url;
+}
+
+function cdnplus_combined_css_postfilter($css)
+{
+	return str_replace('url(/', 'url('.CDNPLUS.'/', $css);
+}
+
+function cdnplus_update_url($content)
+{
 	global $conf;
 
 	//print $content;
@@ -76,6 +126,12 @@ function cdnplus_add_prefix($content) {
 		}
 	}
 	return $content;
+}
+
+
+function cdnplus_debug()
+{
+	echo "DEBUG";
 }
 
 ?>
