@@ -31,3 +31,5 @@ $lang['CDN_USE_EXTRA_2'] = "Nutze 2. CDN Einstellung";
 $lang['CDN_USE_EXTRA_3'] = "Nutze 3. CDN Einstellung";
 $lang['CDN_USE_EXTRA_4'] = "Nutze 4. CDN Einstellung";
 $lang['CDN_USE_EXTRA_5'] = "Nutze 5. CDN Einstellung";
+$lang['CDN_THEME'] = 'Auf das Theme anwenden';
+$lang['CDN_THEME_DESC'] = 'Exportiere die Theme Dateien, wie: js, css.';
