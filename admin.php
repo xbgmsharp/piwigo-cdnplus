@@ -115,6 +115,10 @@ if (isset($_POST['cdnplus_submit']))
       // Update config to DB
       conf_update_param('cdnplus_conf', serialize($conf['cdnplus_conf']));
 
+      // the prefilter changes, we must delete compiled templates
+      $template->delete_compiled_templates();
+
+      // Notify user all is fine
       array_push($page['infos'], l10n('Your configuration settings are saved'));
     }
 }
