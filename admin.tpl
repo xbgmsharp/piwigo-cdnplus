@@ -2,7 +2,7 @@
  <h2>{'CDNPlus'|@translate}</h2>
 </div>
 
-This plugin allows an easy integration with a Content Delivery Network (CDN) for your gallery.
+{'PLG_CDNPLUS'|@translate}
 <br/><br/>
 Refer to the <a href="https://github.com/xbgmsharp/piwigo-cdnplus/wiki" target="_blanck">plugin documentation</a> for additional information. Create an <a href="https://github.com/xbgmsharp/piwigo-cdnplus/issues" target="_blanck">issue</a> for support, or feedback, or feature request.
 
@@ -260,6 +260,7 @@ function cdn_toggle()
         } else {
                 div.setAttribute("style","visibility:hidden; width:0px; height:0px; display:none;");
         }
+	extra_toggle();
 }
 
 function extra_toggle()
