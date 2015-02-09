@@ -22,7 +22,7 @@ add_event_handler('get_admin_plugin_menu_links', 'cdnplus_admin_menu');
 function cdnplus_admin_menu($menu) {
 	global $page,$conf;
 
-	if (!empty($conf['cdnplus_conf']['cdn_enabled']) && empty($conf['cdnplus_conf']['cdn_2']['host']) and in_array($page['page'], array('intro','plugins_list'))) {
+	if (!empty($conf['cdnplus_conf']['cdn_enabled']) && empty($conf['cdnplus_conf']['cdn_1']['host']) and in_array($page['page'], array('intro','plugins_list'))) {
 		$page['errors'][] = l10n('You need to set your CDN host');
 	}
 
