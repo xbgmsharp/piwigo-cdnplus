@@ -43,3 +43,6 @@ $lang['CDN_FILE_TYPES_DESC'] = 'Izvēlieties failu tipus, kas būtu jānodrošin
 $lang['CDN_USE_EXTRA_5'] = 'Lietot tpiekto CDN iestatījumu';
 $lang['CDN_USE_EXTRA_4'] = 'Lietot ceturto CDN iestatījumu';
 $lang['CDN_USE_EXTRA_3'] = 'Lietot trešo CDN iestatījumu';
+$lang['CDN_DOMAINS_DESC'] = 'Jūsu CDN Server domēns. <br /> Jūs varat arī dot ar komatu atdalītu citu CDN domēnu sarakstu. Viens no tiem pēc brīvas izvēles principa tiks pielikts katram failam. <br /> <br /> Jūs varat izmantot vietturus {apakšdomēna}, {domēna} un {paplašinājuma}, lai attiecinātu to uz jūsu mājas lapas dažādām domēna nosaukumu daļām.';
+$lang['CDN_SITE_ROOT_DESC'] = 'Jūsu mājas lapas sakne, lai jūs varētu savienoties ar CDN serveri.<br /> Jums, iespējams, nav to jāmaina, bet, ja jums ir nepieciešams, jūs varat norādīt apakšmapi, piemēram, / images /.
+';
