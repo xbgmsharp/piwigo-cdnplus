@@ -1,1 +1,1 @@
-CDNPlus integration for Piwigo
+Integrazione CDNPlus per Piwigo
