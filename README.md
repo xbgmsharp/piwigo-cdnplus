@@ -14,9 +14,11 @@ Upload this in ``your-gallery/plugins/`` dir.
 
         unzip piwigo-cdnplus.zip
 
-* or clone the project 
+        mv piwigo-cdnplus-master/ cdnplus
 
-        git clone git://github.com/xbgmsharp/piwigo-cdnplus.git
+* or clone the project
+
+        git clone git://github.com/xbgmsharp/piwigo-cdnplus.git cdnplus
 
 Then, go to the admin site, in the plugin section and activate it.
 
