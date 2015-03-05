@@ -1,0 +1,1 @@
+Piwigo 的 CDNPlus 集成
