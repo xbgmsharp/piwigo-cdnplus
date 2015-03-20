@@ -36,15 +36,18 @@ function cdnplus_admin_menu($menu) {
 	return $menu;
 }
 
+//add_event_handler('loc_end_picture', 'cdnplus_debug', EVENT_HANDLER_PRIORITY_NEUTRAL, 4);
+
 // Add event handler if CDNPlus enable
-if (!empty($conf['cdnplus_conf']['cdn_enabled']))
+if (!empty($conf['cdnplus_conf']['cdn_enabled']) and !defined('IN_ADMIN') )
 {
-	//add_event_handler('get_derivative_url', 'cdnplus_update_url', EVENT_HANDLER_PRIORITY_NEUTRAL, 4);
 	//add_event_handler('get_download_url', 'cdnplus_debug'); // download link ?
 	//add_event_handler('get_element_url', 'cdnplus_debug'); // ?
 	//add_event_handler('get_high_url', 'cdnplus_debug'); // ?
 	add_event_handler('get_src_image_url', 'cdnplus_update_url', EVENT_HANDLER_PRIORITY_NEUTRAL, 4); // picture page
 	add_event_handler('get_derivative_url', 'cdnplus_update_url', EVENT_HANDLER_PRIORITY_NEUTRAL, 4); // thumbnailCategory & thumbnail & navThumb
+	//add_event_handler('get_src_image_url', 'cdnplus_update_url'); // picture page
+	//add_event_handler('get_derivative_url', 'cdnplus_update_url'); // thumbnailCategory & thumbnail & navThumb
 
 	// Find which CDN to use for theme and enabled the trigger
 	for($i = 1; $i <= 5; $i++)
@@ -95,7 +98,7 @@ function cdnplus_update_url($content)
 {
 	global $conf;
 
-	//print $content;
+//	print "<br/>CDNPLUS IN[".$content."]";
 	if (!empty($conf['cdnplus_conf']['cdn_enabled']))
 	{
 		$extension = get_extension(strtolower($content));
@@ -125,6 +128,7 @@ function cdnplus_update_url($content)
 			}
 		}
 	}
+//	print "<br/>CDNPLUS OUT[".embellish_url($content)."]";
 	return $content;
 }
 
@@ -132,6 +136,8 @@ function cdnplus_update_url($content)
 function cdnplus_debug()
 {
 	echo "DEBUG";
+//	global $template;
+//	print_r($template);
 }
 
 ?>
