@@ -21,3 +21,6 @@
 // | USA.                                                                  |
 // +-----------------------------------------------------------------------+
 $lang['CDN_USE'] = 'CDN Seçenekleri';
+$lang['CDN_FILE_TYPES'] = 'Dosya Türleri';
+$lang['CDN_KEEP_HTTPS'] = 'URL\'de ki HTTPS dursun';
+$lang['CDN_THEME'] = 'Temaya uygula';
