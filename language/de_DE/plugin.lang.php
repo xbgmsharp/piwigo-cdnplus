@@ -1,35 +1,35 @@
 <?php
-$lang['PLG_CDNPLUS'] = "This plugin allows an easy integration with a Content Delivery Network (CDN) for your gallery.";
+$lang['PLG_CDNPLUS'] = 'Dieses Plugin ermöglicht eine einfache Integration mit einem »Content Delivery Network« (CDN) für Ihre Galerie.';
 
-$lang['CDN_ENABLED'] = "Enabled CDN";
-$lang['CDN_ENABLED_DESC'] = "Allows for easy integration with a Content Delivery Network (CDN).";
+$lang['CDN_ENABLED'] = 'CDN aktiviert';
+$lang['CDN_ENABLED_DESC'] = 'Ermöglicht die einfache Integration mit einem Content Delivery Network (CDN).';
 
-$lang['CDN_USE_EXTRA'] = "Multiple CDN roots";
-$lang['CDN_USE_EXTRA_DESC'] = "Auswahl um extra Content Delivery Network Einstellungen zu ermöglichen. So kannst du verschiedene Einstellungen für verschiedene Dateitypen verwenden, wie seperate Einstellungen für img und js/css Daten.";
+$lang['CDN_USE_EXTRA'] = 'Mehrere CDN-Roots';
+$lang['CDN_USE_EXTRA_DESC'] = 'Auswählen, um ein zusätzliches »Content Delivery Network« zu aktivieren. So können verschiedene Einstellungen für verschiedene Dateitypen verwendet werden, wie z.B. separate Einstellungen für Bilder und Video-Dateien.';
 
 $lang['CDN_SITE_ROOT'] = "Site Root";
-$lang['CDN_SITE_ROOT_DESC'] = "Der Root deiner Seite mit welcher du mit deinem CDN Server verbunden bist.<br/>You probably don't have to change this, but if you need you can specify a sub folder like /images/.";
+$lang['CDN_SITE_ROOT_DESC'] = 'Der Root Ihrer Seite mit welcher Sie mit Ihrem CDN Server verbunden sind.<br/>Sie müssen dies vermutlich nicht ändern, aber falls nötig, kann ein Unterordner wie z.B. /images/ angegeben werden.';
 
 $lang['CDN_DOMAIN'] = "CDN Domain";
-$lang['CDN_DOMAIN_DESC'] = "Die Domain deines CDN Servers";
-$lang['CDN_DOMAINS_DESC'] = "Die Domain deines CDN Servers.<br/>CDN Domains können auch in einer mit Kommas getrennter Liste aufgeführt werden. Eine von diesen wird für jede Datei zufällig festgelegt.";
+$lang['CDN_DOMAIN_DESC'] = 'Die Domain Ihres CDN-Servers';
+$lang['CDN_DOMAINS_DESC'] = 'Die Domäne Ihres CDN-Servers.<br/>CDN-Domänen können auch in einer mit Komma-getrennten Liste aufgeführt werden. Eine von diesen wird für jede Datei zufällig festgelegt.<br /><br />Die Platzhalter {subdomain}, {domain} und {extension} können verwendet werden, um zu verschiedenen Teilen der Domain-Namen Ihrer Webseite zu referenzieren.';
 
-$lang['CDN_EXTRA_FILETYPES'] = "Extra Dateitypen";
-$lang['CDN_EXTRA_FILETYPES_DESC'] = "Eine durch Komma getrennte Liste von extra Dateitypen, welche von deinem CDN Server angeboten werden sollen, eg: js,css";
+$lang['CDN_EXTRA_FILETYPES'] = 'Zusätzliche Dateitypen';
+$lang['CDN_EXTRA_FILETYPES_DESC'] = 'Eine Komma-getrennte Liste von zusätzlichen Dateitypen, welche von Ihrem-CDN Server angeboten werden sollen, z.B.: js,css';
 
-$lang['CDN_FILE_TYPES'] = "Datei Typen";
-$lang['CDN_FILE_TYPES_DESC'] = "Wähle die Dateitypen aus, welche von deinem CDN Server angeboten werden sollen.";
+$lang['CDN_FILE_TYPES'] = 'Dateitypen';
+$lang['CDN_FILE_TYPES_DESC'] = 'Dateitypen auswählen, welche von Ihrem CDN Server angeboten werden sollen.';
 
-$lang['CDN_IGNORE_FILES'] = "Ignoriere Dateien";
-$lang['CDN_IGNORE_FILES_DESC'] = "Eine durch Komma getrennte Liste von (Teile von) Pfad/Datei Namen zum Ignorieren (urls werden nicht durch den CDN Server geändert).";
+$lang['CDN_IGNORE_FILES'] = 'Dateien ignorieren';
+$lang['CDN_IGNORE_FILES_DESC'] = 'Eine durch Komma getrennte Liste von zu ignorierenden (Teilen von) Pfad/Datei-Namen (URLs werden nicht auf den CDN-Server geändert).';
 
-$lang['CDN_KEEP_HTTPS'] = "Behalten von HTTPS in urls";
-$lang['CDN_KEEP_HTTPS_DESC'] = "Wähle um https in den cdn urls zu behalten. Ansonsten werden die cdn urls genutzt als http.";
+$lang['CDN_KEEP_HTTPS'] = 'HTTPS in URLs behalten';
+$lang['CDN_KEEP_HTTPS_DESC'] = 'Auswählen, das HTTPS in den CDN-URLs verwendet wird. Ansonsten werden die CDN-URLs HTTP nutzen.';
 
-$lang['CDN_USE'] = "CDN Options";
-$lang['CDN_USE_EXTRA_2'] = "Nutze 2. CDN Einstellung";
-$lang['CDN_USE_EXTRA_3'] = "Nutze 3. CDN Einstellung";
-$lang['CDN_USE_EXTRA_4'] = "Nutze 4. CDN Einstellung";
-$lang['CDN_USE_EXTRA_5'] = "Nutze 5. CDN Einstellung";
+$lang['CDN_USE'] = 'CDN-Optionen';
+$lang['CDN_USE_EXTRA_2'] = '2. CDN-Einstellung benutzen';
+$lang['CDN_USE_EXTRA_3'] = '3. CDN-Einstellung verwenden';
+$lang['CDN_USE_EXTRA_4'] = '4. CDN-Einstellung verwenden';
+$lang['CDN_USE_EXTRA_5'] = '5. CDN-Einstellung verwenden';
 $lang['CDN_THEME'] = 'Auf das Theme anwenden';
-$lang['CDN_THEME_DESC'] = 'Exportiere die Theme Dateien, wie: js, css.';
+$lang['CDN_THEME_DESC'] = 'Die Theme-Dateien exportieren, wie: js, css.';
