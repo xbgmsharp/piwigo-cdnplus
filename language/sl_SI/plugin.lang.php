@@ -42,3 +42,6 @@ $lang['CDN_THEME_DESC'] = 'Izvozi datoteke preobleke, kot naprimer: js, css.';
 $lang['CDN_USE'] = 'CDN možnosti';
 $lang['CDN_USE_EXTRA'] = 'Več korenski CDN';
 $lang['CDN_USE_EXTRA_2'] = 'Uporabi drugi CDN nabor';
+$lang['CDN_DOMAINS_DESC'] = 'Domenski naslov vašega CDN strežnika.<br />Vpišete lahko tudi spisek z vejico ločenih naslovov različnih CDN domen. Eden od njih bo imenovan naključno za vsako datoteko v nizu.<br /><br />Uporabite lahko polja  {subdomain}, {domain} in {extension} ki se nanašajo na različne dele domene vaše spletne strani.';
+$lang['CDN_USE_EXTRA_DESC'] = 'Izberite da omogočite dodatne nastavitve CDN. Tu lahko uporabite različne nastavitve za različne vrste datotek kot npr. posebne nastavitve za slike in video datoteke.';
+$lang['PLG_CDNPLUS'] = 'Ta vtičnik omogoča preprosto integracijo vaše galerije z "Content Delivery Network" (CDN)';
