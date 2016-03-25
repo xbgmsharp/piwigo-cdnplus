@@ -1,9 +1,13 @@
-Initial Release v2.7.c
+Changes from v2.7.c to v2.8.a
+- Update description
+- Update language, thanks to the contributors
+
+Changes from v2.7.b to v2.7.c
 - Prevent the plugin to be active in admin view
 - Update language, thanks to the contributors
 - Improve documentation
 
-Initial Release v2.7.b
+Changes from v2.7.a to v2.7.b
 - Add support for the theme file, eg: css,js
 - Initial documentation
 - Update language, thanks to the contributors
