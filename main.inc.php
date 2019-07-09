@@ -118,6 +118,7 @@ function cdnplus_update_url($content)
 				&& array_key_exists($extension, $conf['cdnplus_conf']['cdn_'.$i]['filetypes'])
 				&& !empty($conf['cdnplus_conf']['cdn_'.$i]['filetypes'][$extension]))
 			{
+				if (!startsWith($content, 'i.php?')) {
 				$cdnUrl = 'http://';
 				if (!empty($_SERVER['HTTPS']) && !empty($conf['cdnplus_conf']['cdn_'.$i]['keep_https']))
 				{
@@ -125,6 +126,7 @@ function cdnplus_update_url($content)
 				}
 				$cdnUrl = $cdnUrl.$conf['cdnplus_conf']['cdn_'.$i]['host'].make_index_url();
 				$content = $cdnUrl.$content;
+			}
 			}
 		}
 	}
@@ -138,6 +140,12 @@ function cdnplus_debug()
 	echo "DEBUG";
 //	global $template;
 //	print_r($template);
+}
+
+function startsWith($haystack, $needle)
+{
+     $length = strlen($needle);
+     return (substr($haystack, 0, $length) === $needle);
 }
 
 ?>
